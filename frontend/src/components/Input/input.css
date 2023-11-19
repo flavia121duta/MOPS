@@ -1,0 +1,98 @@
+.input-container {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  border-radius: var(--border-radius);
+}
+
+.input-container > label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.input-container > input {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+}
+
+.input-container > label {
+  padding: 2px 4px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  display: inline;
+  color: inherit;
+}
+
+.input-container.error {
+  color: red;
+  border: 1px solid red;
+}
+
+.input-container > input:focus-visible {
+  outline: none;
+}
+
+.password-visibility-toggle,
+.trailing-icon {
+  position: relative;
+  height: 24px;
+  right: 8px;
+  align-self: center;
+}
+
+.error {
+  color: red;
+}
+
+/* INPUT OF TYPE ISPRIMARY = TRUE */
+
+.input-container.input-primary > label {
+  color: inherit var(--color-brown-dark);
+  background-color: var(--bg-color);
+}
+
+.input-container.input-primary > input {
+  color: inherit var(--color-brown-dark);
+  background-color: var(--bg-color);
+}
+
+.input-container.input-primary > input::placeholder {
+  color: var(--color-brown-normal);
+}
+
+.input-container.input-primary.empty {
+  border: 1px solid var(--color-brown-normal);
+}
+
+.input-container.input-primary.not-empty {
+  border: 1px solid var(--color-brown-dark);
+}
+
+/* INPUT OF TYPE ISPRIMARY = FALSE */
+.input-container.input-inverted > label {
+  color: inherit var(--color-brown-light);
+  background-color: var(--color-secondary);
+}
+
+.input-container.input-inverted > input {
+  color: inherit var(--color-brown-dark);
+  background-color: transparent;
+}
+
+.input-container.input-inverted > input::placeholder {
+  color: var(--color-brown-normal);
+}
+
+.input-container.input-inverted.empty {
+  border: 1px solid var(--color-brown-light);
+}
+
+.input-container.input-inverted.not-empty {
+  border: 1px solid var(--color-brown-light);
+}
